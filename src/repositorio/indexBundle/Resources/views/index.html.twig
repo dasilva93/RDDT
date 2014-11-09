@@ -1,0 +1,17 @@
+{# src/repositorio/indexBundle/Resource/views/index.html.twig #}
+{% extends 'repositorioindexBundle::plantilla.html.twig' %}
+{% block titulo%}Repositorio Dijital De Tesis{% endblock %}
+
+{% block body%}
+	<div div="dloguv"><img id="iloguv" src="{{ asset('bundles/repositorioindex/images/logouv2.png') }}"></div>
+	<h1>Repositorio Dijital De Tesis</h1>
+	<div id="dloges">
+		<img class="logea" src="{{ asset('bundles/repositorioindex/images/estudiante.png')}}">
+		<img class="logea" src="{{ asset('bundles/repositorioindex/images/admin.png')}}">
+	</div>
+	<div>
+		<a href=""><button class="button" type="button" >Estudiante</button></a>
+		<a href=""><button class="button" type="button" >Administrador</button></a>
+	</div>
+
+{% endblock %} 

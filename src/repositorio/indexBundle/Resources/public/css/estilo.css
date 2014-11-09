@@ -1,0 +1,25 @@
+body{
+	text-align: center;
+
+}
+h1{
+	font-size: 50px;
+}
+
+#iloguv{
+	width: 260px;
+	height: 350px;
+}
+
+.logea{
+	width: 200px;
+	height:200px;
+}
+.button{
+	width: 180px;
+	height: 30px;
+	background-color: #FF0000;
+	color: white;
+	margin-top: 20px;
+	font-size: 20px;
+}
