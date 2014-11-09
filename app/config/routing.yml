@@ -1,0 +1,4 @@
+repositorioindex:
+    resource: "@repositorioindexBundle/Resources/config/routing.php"
+    prefix:   /
+
