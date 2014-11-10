@@ -9,7 +9,7 @@ $collection->add('repositorioindex_homepage', new Route('/hello/{name}', array(
     '_controller' => 'repositorioindexBundle:Default:index',
 )));
 
-$collection->add('repositorioindex_homepage', new Route('/index', array(
+$collection->add('repositorioindex_homepage', new Route('/', array(
     '_controller' => 'repositorioindexBundle:Default:index',
 )));
 
