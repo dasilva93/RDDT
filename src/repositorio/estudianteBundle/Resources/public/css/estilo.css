@@ -1,0 +1,38 @@
+body{
+	text-align: center;	
+}
+#iloguv {
+	width: 1000px;
+	height: 140px;
+}
+
+fieldset {
+	border: dashed #BBBBBB;
+	margin-top: 10px;
+	font-size: 25px;
+	text-align: left;
+}
+legend {
+	font-size: 40px;
+}
+
+button{
+	background-color: #FF0000;
+	color: white;
+	font-size: 25px;
+	margin-top: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+input {
+	width: 100%;
+	height:20px;
+	font-size: 20px;
+}
+select {
+	width: 100%;
+	height:30px;
+	font-size: 20px;
+}
+
+

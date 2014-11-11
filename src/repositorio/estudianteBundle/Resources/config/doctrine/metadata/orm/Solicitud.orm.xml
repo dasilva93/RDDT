@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Solicitud" table="solicitud">
+    <id name="numero" type="string" column="numero" length="5">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="paginas" type="string" column="paginas" length="20" nullable="false"/>
+    <many-to-one field="indice" target-entity="Tesis">
+      <join-columns>
+        <join-column name="indice" referenced-column-name="indice"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="codigo" target-entity="Usuario">
+      <join-columns>
+        <join-column name="codigo" referenced-column-name="codigo"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

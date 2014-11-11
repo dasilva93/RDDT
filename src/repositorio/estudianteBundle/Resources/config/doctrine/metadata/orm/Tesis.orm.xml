@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Tesis" table="tesis">
+    <id name="indice" type="string" column="indice" length="5">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="titulo" type="string" column="titulo" length="100" nullable="false"/>
+    <field name="autor" type="string" column="autor" length="100" nullable="false"/>
+    <field name="resumen" type="string" column="resumen" length="500" nullable="false"/>
+    <field name="director" type="string" column="director" length="100" nullable="false"/>
+    <field name="palabrasClaves" type="string" column="palabras_claves" length="200" nullable="false"/>
+    <field name="ano" type="string" column="ano" length="5" nullable="false"/>
+    <many-to-one field="codigoProg" target-entity="ProgramaAcademico">
+      <join-columns>
+        <join-column name="codigo_prog" referenced-column-name="codigo_prog"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

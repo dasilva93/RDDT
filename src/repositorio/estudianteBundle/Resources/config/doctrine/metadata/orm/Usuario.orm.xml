@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Usuario" table="usuario">
+    <id name="codigo" type="string" column="codigo" length="20">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nombre" type="string" column="nombre" length="20" nullable="false"/>
+    <field name="apellido" type="string" column="apellido" length="20" nullable="false"/>
+    <field name="correo" type="string" column="correo" length="50" nullable="false"/>
+    <many-to-one field="codigoProg" target-entity="ProgramaAcademico">
+      <join-columns>
+        <join-column name="codigo_prog" referenced-column-name="codigo_prog"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="codigoSede" target-entity="Sede">
+      <join-columns>
+        <join-column name="codigo_sede" referenced-column-name="codigo_sede"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

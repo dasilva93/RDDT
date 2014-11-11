@@ -1,3 +1,7 @@
+estudiante:
+    resource: "@estudianteBundle/Resources/config/routing.php"
+    prefix:   /
+
 repositorioindex:
     resource: "@repositorioindexBundle/Resources/config/routing.php"
     prefix:   /
