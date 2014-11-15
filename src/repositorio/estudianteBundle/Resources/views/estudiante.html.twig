@@ -9,10 +9,10 @@
 	<form method="post" action="registrar">
 		<fieldset>
 			<legend><strong>Ingresar por Primera vez</strong></legend>
-			<div><label>Codigo o Cedula: <input type="text" name="codigo"/></label></div>
-			<div><label>Nombres: <input type="text" name="nombre"/></label></div>
-			<div><label>Apellidos: <input type="text" name="apellido"/></label></div>
-			<div><label>Correo: <input type="text" name="correo"/></label></div>
+			<div><label>Codigo o Cedula: <input type="number" name="codigo" required/></label></div>
+			<div><label>Nombres: <input type="text" name="nombre" required/></label></div>
+			<div><label>Apellidos: <input type="text" name="apellido" required/></label></div>
+			<div><label>Correo: <input type="email" name="correo" required/></label></div>
 			<div><label>Programa Academico : <select name="progaca">
 				{% for i in programas %}
 					<option value="{{i.codigoprog}}">{{i.nombreprog}}</option>
