@@ -1,0 +1,36 @@
+{# src/repositorio/estudianteBundle/Resource/views/index.html.twig #}
+{% extends 'estudianteBundle::plantilla.html.twig' %}
+{% block titulo%}Repositorio Dijital De Tesis - Estudiantes{% endblock %}
+
+{% block body%}
+<fieldset>
+	<legend><strong>Buscar tesis</strong></legend>
+	<div><label> Busqueda por : <select name="buspor">
+		<option>Titulo</option>
+		<option>Autor</option>
+		<option>Director</option>
+		<option>Año</option>
+		<option>Palabras Claves</option>
+		<option>Programa Academico</option></select></label></div>
+	<div><label><input type="text"/></label></div>
+</fieldset>
+<table>
+	<thead>
+		<tr>
+			<th>Titulo</th>
+			<th>Autor</th>
+			<th>Programa Academico</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for i in tesis %}
+		<tr>
+			<td>{{i.titulo}}</td>
+			<td>{{i.autor}}</td>
+			<td>{{i.codigoprog.nombreprog}}</td>
+		</tr>
+		{% endfor%}
+	</tbody>
+</table>
+
+{% endblock %} 

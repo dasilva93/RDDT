@@ -36,8 +36,9 @@ class DefaultController extends Controller
         ('$codigo','$nombre','$apellido','$correo','$codigosede','$codigoprog')";
                 
         $insert = $con->query($sql);
+        echo"<script>alert('Estudiante registrado!!')</script>";
         
-        return $this->render('estudianteBundle::registrar.html.twig',array('insert'=>$sql));
+        return $this->redirect('buscar');
                             
         } catch (\Exception $e) {
         
@@ -49,5 +50,14 @@ class DefaultController extends Controller
 
         }
         
+    }
+    public function buscarAction($por,$bus)
+    {   
+        if($por==null or $bus==null){
+        $repositorio = $this->getDoctrine()->getRepository('estudianteBundle:tesis');
+        $tesis = $repositorio->findAll();
+        
+
+        return $this->render('estudianteBundle::buscar.html.twig',array('tesis'=>$tesis));}
     }
 }
